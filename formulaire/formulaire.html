@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centred Box</title>
+    <link rel="stylesheet" href="./style2.css" />
+  </head>
+  <body>
+    <main>
+      <div class="tout">
+        <h1>LiCode : Formulaire de Sondage</h1>
+        <p>Sondage sur l’apprentissage du code 💻</p>
+        <div class="box">
+          <label for="Nom">Nom:</label>
+          <input type="text" id="Nom" placeholder="Entrez votre nom" />
+          <label for="Email">Email:</label>
+          <input
+            type="email"
+            id="Email"
+            placeholder="Entrez votre adresse email"
+          />
+          <label for="Age">Age:</label>
+          <input type="number" id="Age" placeholder="Age" />
+          <label for="dropdown">A quel niveau de programmation es-tu?</label>
+          <select id="dropdown">
+            <option>debutant</option>
+            <option>Intermediaire</option>
+            <option>Avance</option>
+            <option>Pro</option>
+          </select>
+          <label>Quelles technologies préfères-tu apprendre ?</label>
+          <label for="tech"><input type="radio" id="tech" /> HTML/CSS</label>
+          <label for="tech"><input type="radio" id="tech" /> JavaScript</label>
+          <label for="tech"><input type="radio" id="tech" /> PHP</label>
+          <label for="tech"><input type="radio" id="tech" /> Python </label>
+          <label for="tech"><input type="radio" id="tech" /> Autres</label>
+          <label for="platform"
+            >Quelle est ta plateforme d’apprentissage préférée ?</label
+          >
+          <select id="platform">
+            <option>choisir</option>
+            <option>youtube</option>
+            <option>Udemy</option>
+            <option>freecodecamp</option>
+            <option>cousera</option>
+            <option>codecademy</option>
+            <option>Autres</option>
+          </select>
+          <label>Quels types de projets préfères-tu réaliser ?</label>
+          <label for="projects"
+            ><input type="checkbox" id="projects" />Sites web</label
+          >
+          <label for="projects"
+            ><input type="checkbox" id="projects" />Applications mobiles</label
+          >
+          <label for="projects"
+            ><input type="checkbox" id="projects" />Jeux vidéo</label
+          >
+          <label for="projects"
+            ><input type="checkbox" id="projects" />Intelligence artificielle et
+            Machine Learning</label
+          >
+          <label for="projects"
+            ><input type="checkbox" id="projects" />Automatisation de
+            tâches</label
+          >
+          <label for="projects"
+            ><input type="checkbox" id="projects" />Cybersécurité</label
+          >
+          <label for="projects"
+            ><input type="checkbox" id="projects" />Autres</label
+          >
+          <label for="last"
+            >Quelles difficultés rencontres-tu le plus souvent en programmation
+            ?</label
+          >
+          <textarea rows="10">Ecrivez ici !!</textarea>
+          <input
+            style="margin-top: 10px; width: 100px"
+            type="button"
+            value="Envoyer"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

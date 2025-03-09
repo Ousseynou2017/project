@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 90em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.box{
+    background-color: rgb(17, 17, 56);
+    height: 70em;
+    width: 30em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+}
+.tout{
+    margin-top: 3em;
+}
+
+main h1, p{
+    margin: 6px;
+}
+main h1{
+    color: white;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    line-height: 5px;
+    text-shadow: 3px 3px 5px black, 5px 5px 5px black;
+}
+main p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-end: 0px;
+    color: azure;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+body{
+    background-image: url(./background-image.jpg);
+    object-fit: cover;
+}
+
+label{
+    margin-top: 1em;
+    color: azure;
+}
+input{
+    font-size: 20px;
+}
+
+form label {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
