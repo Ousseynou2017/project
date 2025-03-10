@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:Gainsboro;
+    height: 100vh;
+    position: relative;
+}
+header{
+    display: flex;
+    height: 55px;
+   justify-content: space-around;
+}
+.head-info{
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+}
+.head-info p {
+   padding: 1rem;
+}
+
+.donnee-enter{
+    margin-left: 10em;
+}
+.donnee-enter h2 {
+    margin-left: -2em;
+}
+.donnee-enter p {
+    margin-left: 3em;
+    margin-bottom: -10px;
+}
+
+.logo-1{
+    display: flex;
+    align-items: center;
+}
+.logo-1 img{
+    padding: 3px;
+    height: 30px;
+}
+
+main{
+    width: 60%;
+    height: 80em;
+    margin-left: 30vh;
+    justify-items: center;
+    padding-top: 3em;
+}
+main h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+}
+main input{
+    width: 300px;
+    height: 1.9rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.button-1{
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: white;
+    background-color: #1804FD;
+    border: 1px solid black;
+    transition: all 0.3sease-in-out;
+    margin-top: 1em;
+    margin-left: 3.5em;
+}
+button:hover{
+    background-color: white;
+    color: #1804FD;
+    transition: 0.5s;
+}
+button:active{
+    opacity: 0.4;
+}
+
+.logo-2{
+    display: flex;
+    margin-left: 4em;
+    margin-top: 2em;
+}
+
+.contain{
+    margin-left: 1em;
+
+}
+.video{
+    margin: 5em;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: 0.4s;
+}
+a:hover{
+    background-color: rgb(105, 101, 101);
+    color: white;
+}
+
+ul li{
+    margin-top: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.h3-3{
+    margin: 1em;
+    font-size: 1rem;
+    font-family:'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+}
+
+.table{
+   border-style: solid;
+   border-width: 1px;
+   height: 20em;
+   justify-items: center;
+   position: relative;
+   margin-top: 2em;
+}
+.choix{
+    font-size: 1.5rem;
+    background-color: rgba(128, 128, 128, 0.708);
+    padding: 10px 2.5em;
+}
+
+.button-2{
+    background-color: #1804FD;
+    color: azure;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -1px;
+    bottom: 3px;
+    left: 5em;
+}
+.button-3{
+    background-color: #1804FD;
+    color: azure;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -1px;
+    bottom: 3px;
+    left: 3em;
+}
+
+.table-1{
+    display: flex;
+}
+
+.video{
+    height: 200px;
+}
+
+footer{
+    position: absolute;
+    bottom: -200vh;
+    left: 80vh;
+    background-color: rgba(128, 128, 128, 0.861);
+}
+.condition{
+    display: flex;
+}
+.condition li {
+    margin: 1em;
+}
+.condition-2{
+    margin-left: 7em;
+}
