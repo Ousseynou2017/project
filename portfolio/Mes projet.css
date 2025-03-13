@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    color: white;
+}
+body{
+    background-color: #1904fd74;
+    position: relative;
+    display: flex;
+}
+header{
+    background-color: #191548;
+    height: 3.5em;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+}
+header ul {
+    right: 0;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 2em;
+    justify-content: end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 1em;
+}
+
+.head:hover {
+    background-color: white;
+    color: blue;
+    transition: 0.8s;
+    font-size: 1.6rem;
+}
+main{
+    background-color: #191548;
+    padding-top: 2em;
+    height: 100em;
+    width: 100%;
+}
+
+.Mes-img{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+
+ .img-1{
+    height: 300px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+h1{
+    text-align: center;
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 0.2em;
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: azure;
+    border-bottom: 5px solid black;
+}
+
+h2{
+    color: white;
+    padding: 10px;
+}
+
+p{
+    padding: 1em;
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgba(206, 206, 206, 0.72);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.img-info{
+    background-color: rgb(49, 49, 49);
+}
+
+.Mes-img-2:hover{
+    box-shadow: 2px 2px 15px 1px #fffcfc;
+    transition: 0.5s;
+}
