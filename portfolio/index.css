@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --color-1:#00abf0;
+}
 li{
     list-style: none;
 }
@@ -12,16 +15,16 @@ a{
     color: white;
 }
 body{
-    height: 500vh;
-    background-color: rgb(49, 49, 49);
-    color: Snow;
+    height: 100vh;
+    background-color: #081b29;
+    color: #ededed;
 }
 header{
-    background-color: #191548;
     height: 3.5em;
     align-content: center;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 header ul {
     position: relative;
@@ -34,18 +37,32 @@ header ul {
     margin-right: 1em;
 }
 
+.head:hover {
+    color: var(--color-1);
+    transform: translateY(-20px);
+    transition: 0.8s;
+    font-size: 1.6rem;
+}
+
 .nom{
     font-size: 2.5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-.first-h3 {
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+h3{
+    margin-top: 5px;
 }
+
+h1{
+    line-height: 1.2;
+}
+.h1-1{
+    position: absolute;
+    left: 5em;
+    
+}
+
 .span{
-    color: #1904fdef;
+    color: var(--color-1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -53,55 +70,136 @@ main{
     height: 100vh;
     align-content: center;
     justify-items: center;
+    position: relative;
 }
 
-.section-1{
-    height: 100%;
+.section{
+    height: 100vh;
     width: 100%;
     align-content: center;
     padding-left: 10em;
 }
 
-.section-2{
-    background-color: azure;
-    color: black;
+.link{
+   position: absolute;
+   bottom: 40px;
+   display: flex;
+   gap: 1em;
+}
+.link a{
+    position: relative;
+   border: solid;
+   border-radius: 50%;
+   padding: 5px;
+   border-color: var(--color-1);
+   color: var(--color-1);
+   cursor: pointer;
+   overflow: hidden;
+}
+
+
+.link a::before{
+    position: absolute;
+    content: '';
+     top: 0;
+    left: 0;
+    width: 0;
     height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.section-2-1 p{
-    width: 27em;
-    font-size: 1.5rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.h1-2{
-    font-size: 3rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 1em;
-}
-.span-2{
-    font-weight: bold;
+    z-index: -1;
+    transition: .5s;
+
 }
 
-.section-3{
-    background-color: #1904fd74;
-    height: 200vh;
+.link a:hover::before{
     width: 100%;
-    text-align: center;
+    background-color: var(--color-1);
 }
 
-.h2-1 {
-    font-size: 3rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-bottom: solid black;
-    padding: 7px;
-    
+.link a:hover{
+    color: #081b29;
 }
-.projet{
-    font-size: 1.5rem;
-    color: rgba(206, 206, 206, 0.72);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    padding: 1em;
+
+.link a:active{
+    transform: translateY(-20px);
+    transition: transform 0.4s ease-in-out;
 }
+
+p{
+    margin: 2em;
+    width: 30em;
+    margin-left: -10px;
+    font-size: 16px;
+}
+button{
+    height: 3em;
+    width: 150px;
+    border-radius: 5px;
+    border: solid  var(--color-1) 2px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 19px;
+    background-color: var(--color-1);
+    cursor: pointer;
+}
+
+.button-1{
+    position: relative;
+    background-color: var(--color-1);
+    color: #081b29;
+    margin-left: 2em;
+}
+
+.button-1::before{
+    position: absolute;
+    content: '';
+     top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.button-1:hover::before{
+    width: 100%;
+}
+
+.button-1:hover{
+    color: #00abf0;
+    z-index: 1;
+}
+
+.button-2{
+    background-color: transparent;
+    color: var(--color-1);
+    margin-left: 2em;
+    position: relative;
+}
+.button-2::before{
+    position: absolute;
+    content: '';
+     top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--color-1);
+    z-index: -1;
+    transition: .5s;
+}
+.button-2:hover::before{
+    width: 100%;
+}
+.button-2:hover{
+    color: #081b29;
+}
+
+.button-2:active{
+    opacity: 0.2;
+}
+.button-1:active{
+    opacity: 0.2;
+}
+
+
+

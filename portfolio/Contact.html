@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./Contact.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
+      <h2 class="h1-1">Portfolio</h2>
       <ul>
         <li><a class="head" href="./index.html">Acceuil</a></li>
         <li><a class="head" href="./A propos.html">A propos</a></li>
@@ -16,5 +20,57 @@
         <li><a class="head" href="./Contact.html">Contact</a></li>
       </ul>
     </header>
+    <main>
+      <div class="Contact-1">
+        <h1>Lest's Work Together</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique
+          illum ipsam sequi sit repudiandae iusto eveniet ipsum earum dolore
+          eius accusamus nemo beatae voluptatum necessitatibus rem, perspiciatis
+          odit possimus nesciunt!
+        </p>
+        <div class="icon">
+          <div class="icon-info">
+            <div><i class="bx bxs-phone"></i></div>
+            <div>
+              <div class="name-icon">phone</div>
+              <div>(+221) 76 463 44 89</div>
+            </div>
+          </div>
+          <div class="icon-info">
+            <div><i class="bx bxs-envelope"></i></div>
+            <ddiv>
+              <div class="name-icon">Email</div>
+              <div>oseck2005@gmail.com</div>
+            </ddiv>
+          </div>
+          <div class="icon-info">
+            <div><i class="bx bxs-location-plus"></i></div>
+            <div>
+              <div class="name-icon">Adresse</div>
+              <div>Keur Massar,Cite Penitence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Contact-2">
+        <h1>Contact <span>Me!</span></h1>
+        <form method="post" action="submit.php">
+          <div class="Contact-input">
+            <input class="input" type="nom" placeholder="Nom complet" />
+            <input class="input" type="email" placeholder="Email adress" />
+            <input
+              class="input"
+              type="number"
+              placeholder="numero  telephone"
+            />
+            <input class="input" type="email" placeholder="Email subject" />
+          </div>
+          <textarea placeholder="your message" cols="70" rows="10"></textarea>
+          <br />
+          <input class="button" type="submit" value="Send message" />
+        </form>
+      </div>
+    </main>
   </body>
 </html>

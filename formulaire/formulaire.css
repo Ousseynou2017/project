@@ -61,7 +61,7 @@ h1 {
     font-weight: bold;
 }
 body{
-    background-image: url(./background-image.jpg);
+    background-image: url(./pc-img.jpg);
     object-fit: cover;
 }
 

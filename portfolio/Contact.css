@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-1:#00abf0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    color: white;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.h1-1{
+    position: absolute;
+    left: 5em;
+    
+}
+
+body{
+    height: 100vh;
+    background-color: #081b29;
+    color: #ededed;
+}
+header{
+    height: 3.5em;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+header ul {
+    position: relative;
+    right: 0;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 2em;
+    justify-content: end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 1em;
+}
+
+.head:hover {
+    color: var(--color-1);
+    transform: translateY(-20px);
+    transition: 0.8s;
+    font-size: 1.6rem;
+}
+main{
+    position: absolute;
+    margin-top: 3.5em;
+    height: 150vh;
+    width: 100%;
+    background-color: #081b29;
+    display: flex;
+}
+
+.Contact-1{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding-left: 5em;
+    padding-top: 8em;
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.icon-info{
+    display: flex;
+}
+.name-icon{
+    color: var(--color-1);
+    margin-bottom: 4px;
+}
+
+.bx{
+    color: var(--color-1);
+    background-color: #10324a6e;
+    padding: 8px;
+    margin: 2px;
+    margin-right: 1em;
+}
+
+.Contact-2{
+    background-color: #10324a6e;
+    margin: 2em;
+    padding: 2em;
+    text-align: center;
+    border-radius: 5px;
+   margin-bottom: 20em;
+}
+
+span{
+    color: var(--color-1);
+}
+
+.Contact-input{
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5em;
+}
+
+.input{
+    background-color: #081b29;
+    color: white;
+    height: 4em;
+    border: 0;
+    border-radius: 2px;
+}
+.input:active:hover{
+    border: 3px solid;
+    box-shadow: red ;
+}
+
+::placeholder{
+    padding-left: 1em;
+}
+
+textarea{
+   margin-top: 2em;
+   background-color: #081b29;
+   border: none;
+   padding-top: 1em;
+}
+
+.button{
+   margin-top: 1em;
+   background-color: #00abf0;
+   padding: 1em;
+   width: 14em;
+   border-radius: 7em;
+}
+.button:hover{
+    background-color: #081b29;
+    color: #00abf0;
+    transition: 0.5s;
+}

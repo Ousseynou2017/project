@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation CSS</title>
+    <style>
+      /* Définition de l'animation */
+      @keyframes moveRight {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(200px);
+        }
+      }
+
+      /* Style de l'élément animé */
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: royalblue;
+        position: relative; /* Nécessaire pour le déplacement */
+        animation: moveRight 2s ease-in-out infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
