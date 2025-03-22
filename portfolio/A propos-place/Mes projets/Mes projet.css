@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-1:#00abf0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    color: white;
+}
+body{
+    height: 100vh;
+    background-color: #081b29;
+    color: #ededed;
+}
+header{
+    height: 3.5em;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+header ul {
+    position: relative;
+    right: 0;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 2em;
+    justify-content: end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 1em;
+}
+
+.head:hover {
+    color: var(--color-1);
+    transform: translateY(-20px);
+    transition: 0.8s;
+    font-size: 1.6rem;
+}
+
+.nom{
+    font-size: 2.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h3{
+    margin-top: 5px;
+}
+
+h1{
+    line-height: 1.2;
+    margin-top: 1em;
+}
+.h1-1{
+    position: absolute;
+    left: 5em;
+}
+
+main{
+    position: relative;
+    top: 3.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+main h1 {
+    position: absolute;
+   margin-left: 10em;
+}
+
+.Section{
+    display: flex;
+    margin-top: 5em;
+    column-gap: 5em;
+    margin-left: 10em;
+    padding-bottom: 12em;
+}
+.section-1{
+    display: flex;
+    flex-direction: column;
+}
+
+.numb{
+    font-size: 8rem;
+    -webkit-text-stroke: 0.7rem white;
+    color: transparent;
+}
+
+.numb h3 {
+    font-size: 3.5rem;
+}
+
+.numb p{
+    font-size: 1.6rem;
+}
+
+.langage{
+    color: #00abf0;
+    margin: 2rem 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.32);
+    padding-bottom: 1em;
+}
+
+.section-1 img{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border: 3px solid;
+    margin-top: -1em;
+    margin-left: 1em;
+}
+
+
+.section-2 img{
+    width: 400px;
+    height: 400px;
+}
+
+span{
+    color: #00abf0;
+}
+
+.bx{
+    width: 400px;
+    height: 600px;
+}
+
+
