@@ -11,10 +11,7 @@ html{
     font-size: 62.5%;
 }
 
-html,body{
-   width: 125%;
 
-}
 
 
 li{
@@ -240,6 +237,7 @@ button:active{
     padding: 0.6em;
     color: #00abf0;
 }
+
 
 
 

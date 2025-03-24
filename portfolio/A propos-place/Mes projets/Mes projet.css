@@ -109,14 +109,18 @@ main h1 {
 .section-1 img{
     height: 30px;
     width: 30px;
-    background-color: white;
-    border: 3px solid;
+    background-color: #4a4b4b;
+    color: white;
+    border: 3px;
     margin-top: -1em;
     margin-left: 1em;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 
 .section-2 img{
+    position: relative;
     width: 400px;
     height: 400px;
 }
@@ -125,9 +129,5 @@ span{
     color: #00abf0;
 }
 
-.bx{
-    width: 400px;
-    height: 600px;
-}
 
 
