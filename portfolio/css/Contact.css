@@ -1,0 +1,173 @@
+/* 1. Variables et Configuration */
+:root {
+    --primary-color: #00abf0;
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 2. Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background: rgba(8, 27, 41, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.head {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.head:hover, .head.active {
+    color: var(--primary-color);
+}
+
+/* 3. Layout Principal (Flexbox) */
+main {
+    padding: 8rem 9% 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    min-height: 100vh;
+}
+
+.Contact-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.Contact-1 h1 {
+    font-size: 3rem;
+}
+
+.icon-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.icon-info i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background: var(--second-bg-color);
+    padding: 12px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.name-icon {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* 4. Formulaire (Grid) */
+.Contact-2 {
+    flex: 1.2;
+    background: var(--second-bg-color);
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid var(--primary-color);
+}
+
+.Contact-2 h1 span {
+    color: var(--primary-color);
+}
+
+.Contact-input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg-color);
+    color: white;
+    border: 1px solid #2a3e4d;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 171, 240, 0.2);
+}
+
+textarea {
+    margin-top: 1.5rem;
+    resize: none;
+}
+
+.button {
+    margin-top: 2rem;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 2px solid var(--primary-color);
+}
+
+.button:hover {
+    background: transparent;
+    color: var(--primary-color);
+}
+
+/* 5. MEDIA QUERIES (Responsive - Obligatoire pour le prof) */
+@media (max-width: 950px) {
+    main {
+        flex-direction: column;
+        padding: 6rem 5% 2rem;
+    }
+    
+    .Contact-2 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .Contact-input {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    
+    .Contact-1 h1 {
+        font-size: 2rem;
+    }
+}

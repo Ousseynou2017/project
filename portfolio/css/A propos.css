@@ -1,0 +1,218 @@
+/* 1. Configuration de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #00abf0;
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* 2. Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background: rgba(8, 27, 41, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+header ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.head {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.head:hover, .head.active {
+    color: var(--primary-color);
+}
+
+/* 3. Layout Principal */
+main {
+    padding: 10rem 9% 2rem;
+    display: flex;
+    flex-direction: column; /* On empile les sections 1 et 2 */
+    gap: 4rem;
+}
+
+/* 4. Section 1 (Texte et Boutons d'onglets) */
+.section-1 {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-1 h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.section-1 p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.about-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-sub {
+    font-size: 1.6rem;
+    color: white;
+    background-color: var(--second-bg-color);
+    padding: 1.2rem 2.5rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.btn-sub:hover, .btn-sub.active {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* 5. Section 2 (Grille d'expérience ou de compétences) */
+.section-2 {
+    width: 100%;
+}
+
+.section-2 h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.span-1 { color: var(--primary-color); }
+
+/* Grille d'Expérience (Education) */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.page {
+    background-color: var(--second-bg-color);
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+
+.page:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.page .date {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.page h3 {
+    font-size: 2.2rem;
+    margin: 1rem 0;
+}
+
+/* Grille de Compétences (Skills) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.etiquette {
+    background-color: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: 0.4s;
+    border: 1px solid transparent;
+}
+
+.etiquette:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.etiquette i {
+    font-size: 5rem;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.etiquette span {
+    font-size: 1.6rem;
+}
+
+/* 6. RESPONSIVE */
+@media (max-width: 768px) {
+    header { padding: 1.5rem 5%; }
+    header ul { display: none; } /* Menu burger à prévoir */
+    main { padding: 8rem 5% 2rem; }
+    .section-1 h1 { font-size: 3rem; }
+}
+/* --- Ajout spécifique pour A-propos-3 (About Me) --- */
+.section-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2.5rem;
+    background-color: var(--second-bg-color);
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 171, 240, 0.1);
+}
+
+.section-info p {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.section-info p span {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}

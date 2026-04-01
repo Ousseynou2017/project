@@ -1,0 +1,216 @@
+/* 1. Configuration de base (Variables de couleurs selon consigne 2.1) */
+:root {
+    --primary-color: #00abf0;    /* Bleu accent */
+    --bg-color: #081b29;         /* Fond sombre professionnel */
+    --second-bg-color: #112e42;  /* Fond secondaire */
+    --text-color: #ededed;       /* Texte clair */
+    --main-font: 'Poppins', sans-serif; /* Typographie Google Fonts */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: var(--main-font);
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* 2. Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background: rgba(8, 27, 41, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 2.5rem;
+}
+
+.head {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.head:hover, .head.active {
+    color: var(--primary-color);
+}
+
+/* 3. Section Accueil (Responsive avec Flexbox) */
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    gap: 2rem;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content .span {
+    color: var(--primary-color);
+}
+
+.home-content h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+
+.home-content p {
+    font-size: 1rem;
+    margin: 1.5rem 0 2rem;
+    line-height: 1.6;
+}
+
+/* 4. Boutons */
+.btn-box {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.button-1, .button-2 {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.button-1 {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.button-1:hover {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.button-2 {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.button-2:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* 5. Réseaux Sociaux */
+.social-links {
+    margin-top: 2.5rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+    transition: .5s;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* 6. Image de profil */
+.home-img .img-box {
+    width: 30vw;
+    height: 30vw;
+    min-width: 250px; /* Ajout : évite que l'image devienne trop petite sur tablette */
+    min-height: 250px; /* Ajout */
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease; /* Ajout : petit effet au survol */
+}
+
+.home-img .img-box:hover {
+    box-shadow: 0 0 25px var(--primary-color); /* Ajout : brillance au survol */
+}
+/* 7. Footer */
+footer {
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+    text-align: center;
+}
+
+/* 8. MEDIA QUERIES (Responsive Design - Consigne 4.1) */
+@media (max-width: 991px) {
+    header { padding: 1.5rem 5%; }
+    .home-section { padding: 0 5%; }
+}
+
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column-reverse; /* Image au-dessus du texte sur mobile */
+        justify-content: center;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .home-content h1 { font-size: 2.5rem; }
+    .home-content h3 { font-size: 1.5rem; }
+    
+    .home-img .img-box {
+        width: 200px;
+        height: 200px;
+    }
+
+    .btn-box { justify-content: center; }
+    header ul { display: none; } /* On pourra ajouter un menu burger plus tard */
+}
