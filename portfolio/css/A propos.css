@@ -1,4 +1,3 @@
-/* 1. Configuration de base */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,7 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%; 
     scroll-behavior: smooth;
 }
 
@@ -25,7 +24,6 @@ body {
     line-height: 1.6;
 }
 
-/* 2. Header & Navigation */
 header {
     position: fixed;
     top: 0;
@@ -62,15 +60,13 @@ header ul {
     color: var(--primary-color);
 }
 
-/* 3. Layout Principal */
 main {
     padding: 10rem 9% 2rem;
     display: flex;
-    flex-direction: column; /* On empile les sections 1 et 2 */
+    flex-direction: column;
     gap: 4rem;
 }
 
-/* 4. Section 1 (Texte et Boutons d'onglets) */
 .section-1 {
     text-align: center;
     max-width: 800px;
@@ -109,7 +105,6 @@ main {
     color: var(--primary-color);
 }
 
-/* 5. Section 2 (Grille d'expérience ou de compétences) */
 .section-2 {
     width: 100%;
 }
@@ -122,42 +117,35 @@ main {
 
 .span-1 { color: var(--primary-color); }
 
-/* Grille d'Expérience (Education) */
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-.page {
-    background-color: var(--second-bg-color);
-    padding: 3rem;
-    border-radius: 1rem;
-    border: 2px solid transparent;
-    transition: 0.4s;
-}
-
-.page:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-5px);
-}
-
-.page .date {
-    color: var(--primary-color);
+.p-intro {
     font-size: 1.6rem;
-    font-weight: 600;
+    text-align: center;
+    margin: 2rem 0 3rem;
+    color: #b0c4de;
 }
 
-.page h3 {
+.section-2 .p-1 {
     font-size: 2.2rem;
-    margin: 1rem 0;
+    text-align: center;
+    color: #b0c4de;
+    margin: 4rem auto 7rem;
+    max-width: 900px;
+    font-weight: 400;
+    line-height: 1.8;
 }
 
-/* Grille de Compétences (Skills) */
+.learning-title {
+    margin-top: 5rem; 
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .etiquette {
@@ -179,20 +167,37 @@ main {
     color: var(--primary-color);
     display: block;
     margin-bottom: 1rem;
+    transition: color 0.3s ease; 
 }
 
 .etiquette span {
+    display: block;
     font-size: 1.6rem;
+    font-weight: 500;
 }
 
-/* 6. RESPONSIVE */
-@media (max-width: 768px) {
-    header { padding: 1.5rem 5%; }
-    header ul { display: none; } /* Menu burger à prévoir */
-    main { padding: 8rem 5% 2rem; }
-    .section-1 h1 { font-size: 3rem; }
+.etiquette small {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    color: #ff4d4d;
+    font-style: italic;
 }
-/* --- Ajout spécifique pour A-propos-3 (About Me) --- */
+
+.etiquette:hover i.bxl-html5,
+.etiquette:hover i.bxl-css3,
+.etiquette:hover i.bxl-javascript,
+.etiquette:hover i.bxl-python,
+.etiquette:hover i.bxl-php {
+    color: #00ff00;
+}
+
+.etiquette:hover i.bxl-tailwind-css,
+.etiquette:hover i.bxl-react,
+.etiquette:hover i.bxl-nodejs {
+    color: #ff0000;
+}
+
 .section-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -215,4 +220,12 @@ main {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    header { padding: 1.5rem 5%; }
+    header ul { display: none; }
+    main { padding: 8rem 5% 2rem; }
+    .section-1 h1 { font-size: 3rem; }
+    .section-2 .p-1 { font-size: 1.8rem; margin-bottom: 4rem; }
 }

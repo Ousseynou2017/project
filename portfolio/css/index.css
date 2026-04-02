@@ -1,10 +1,10 @@
-/* 1. Configuration de base (Variables de couleurs selon consigne 2.1) */
+/* 1. Configuration de base */
 :root {
     --primary-color: #00abf0;    /* Bleu accent */
     --bg-color: #081b29;         /* Fond sombre professionnel */
     --second-bg-color: #112e42;  /* Fond secondaire */
     --text-color: #ededed;       /* Texte clair */
-    --main-font: 'Poppins', sans-serif; /* Typographie Google Fonts */
+    --main-font: 'Poppins', sans-serif; 
 }
 
 * {
@@ -21,16 +21,17 @@
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 /* 2. Header & Navigation */
 header {
-    position: fixed;
+    position: fixed; /* Fixé en haut */
     top: 0;
     left: 0;
     width: 100%;
     padding: 1.5rem 9%;
-    background: rgba(8, 27, 41, 0.8);
+    background: rgba(8, 27, 41, 0.9); /* Plus opaque pour plus de clarté */
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -64,13 +65,14 @@ header ul li {
     color: var(--primary-color);
 }
 
-/* 3. Section Accueil (Responsive avec Flexbox) */
+/* 3. Section Accueil */
 .home-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 9%;
-    gap: 2rem;
+    justify-content: space-between; /* Espace entre texte et image */
+    padding: 12rem 9% 2rem; /* 12rem en haut pour éviter que le header cache le texte */
+    gap: 5rem;
 }
 
 .home-content {
@@ -164,24 +166,42 @@ header ul li {
     box-shadow: 0 0 15px var(--primary-color);
 }
 
-/* 6. Image de profil */
+/* 6. Image de profil corrigée */
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement dans sa zone */
+    align-items: center;
+}
+
 .home-img .img-box {
-    width: 30vw;
-    height: 30vw;
-    min-width: 250px; /* Ajout : évite que l'image devienne trop petite sur tablette */
-    min-height: 250px; /* Ajout */
+    width: 32vw;
+    height: 32vw;
+    max-width: 450px;
+    max-height: 450px;
+    min-width: 250px;
+    min-height: 250px;
     border-radius: 50%;
     border: 5px solid var(--primary-color);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s ease; /* Ajout : petit effet au survol */
+    transition: 0.5s ease;
+    box-shadow: 0 0 15px rgba(0, 171, 240, 0.3);
+}
+
+.home-img .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Empêche la déformation de la photo */
+    object-position: center;
 }
 
 .home-img .img-box:hover {
-    box-shadow: 0 0 25px var(--primary-color); /* Ajout : brillance au survol */
+    box-shadow: 0 0 25px var(--primary-color);
 }
+
 /* 7. Footer */
 footer {
     padding: 2rem 9%;
@@ -189,28 +209,30 @@ footer {
     text-align: center;
 }
 
-/* 8. MEDIA QUERIES (Responsive Design - Consigne 4.1) */
+/* 8. MEDIA QUERIES */
 @media (max-width: 991px) {
     header { padding: 1.5rem 5%; }
-    .home-section { padding: 0 5%; }
+    .home-section { 
+        padding: 10rem 5% 2rem; 
+        gap: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
     .home-section {
-        flex-direction: column-reverse; /* Image au-dessus du texte sur mobile */
+        flex-direction: column-reverse; /* Photo au-dessus sur mobile */
         justify-content: center;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 10rem;
     }
 
     .home-content h1 { font-size: 2.5rem; }
     .home-content h3 { font-size: 1.5rem; }
     
     .home-img .img-box {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
 
     .btn-box { justify-content: center; }
-    header ul { display: none; } /* On pourra ajouter un menu burger plus tard */
 }
