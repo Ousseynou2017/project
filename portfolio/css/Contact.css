@@ -171,3 +171,6 @@ textarea {
         font-size: 2rem;
     }
 }
+.blue{
+    color: var(--primary-color);
+}
