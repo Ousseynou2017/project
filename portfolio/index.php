@@ -14,15 +14,15 @@
   </head>
   <body>
    <header>
-  <a href="./index.html" class="logo"><h2>Portfolio.</h2></a>
+  <a href="./index.php" class="logo"><h2>Portfolio.</h2></a>
   <nav>
     <ul>
-      <li><a class="head active" href="./index.html">Accueil</a></li>
+      <li><a class="head active" href="./index.php">Accueil</a></li>
       
-      <li><a class="head" href="./pages/A propos-2.html">À propos</a></li>
+      <li><a class="head" href="./pages/a-propos-2.php">À propos</a></li>
       
-      <li><a class="head" href="./pages/Mes projets-1.html">Projets</a></li>
-      <li><a class="head" href="./pages/Contact.html">Contact</a></li>
+      <li><a class="head" href="./pages/mes-projets-1.php">Projets</a></li>
+      <li><a class="head" href="./pages/Contact.php">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -42,7 +42,7 @@
           </p>
 
           <div class="btn-box">
-            <a href="./pages/Contact.html" class="button-1">Me recruter</a>
+            <a href="./pages/Contact.php" class="button-1">Me recruter</a>
             <a href="#contact" class="button-2">Discutons</a>
           </div>
 

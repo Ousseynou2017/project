@@ -14,16 +14,16 @@
     <header>
       <h2 class="h1-1">Portfolio</h2>
       <ul>
-        <li><a class="head" href="../index.html">Acceuil</a></li>
+        <li><a class="head" href="../index.php">Acceuil</a></li>
         <li>
-          <a class="head" href="./A propos-2.html">A propos</a>
+          <a class="head" href="./a-propos-2.php">A propos</a>
         </li>
         <li>
-          <a class="head" href="./Mes projets-1.html"
+          <a class="head" href="./mes-projets-1.php"
             >Projets</a
           >
         </li>
-        <li><a class="head" href="./Contact.html">Contact</a></li>
+        <li><a class="head" href="./Contact.php">Contact</a></li>
       </ul>
     </header>
     <main>

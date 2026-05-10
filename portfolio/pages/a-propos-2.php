@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compétences | Ousseynou Seck</title>
     
-    <link rel="stylesheet" href="../css/A propos.css" />
+    <link rel="stylesheet" href="../css/a-propos.css" />
     
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   </head>
   <body>
    <header>
-      <a href="../index.html" class="logo"><h2>Portfolio.</h2></a>
+      <a href="../index.php" class="logo"><h2>Portfolio.</h2></a>
       <nav>
         <ul>
-          <li><a class="head" href="../index.html">Accueil</a></li>
-          <li><a class="head active" href="./A propos-1.html">À propos</a></li>
-          <li><a class="head" href="./Mes projets-1.html">Projets</a></li>
-          <li><a class="head" href="./Contact.html">Contact</a></li>
+          <li><a class="head" href="../index.php">Accueil</a></li>
+          <li><a class="head active" href="./A propos-1.php">À propos</a></li>
+          <li><a class="head" href="./mes-projets-1.php">Projets</a></li>
+          <li><a class="head" href="./Contact.php">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -33,8 +33,8 @@
         </p>
         
         <div class="about-buttons">
-          <a href="./A propos-2.html" class="btn-sub active">Compétences</a>
-          <a href="./A propos-3.html" class="btn-sub">A propos de moi</a>
+          <a href="./a-propos-2.php" class="btn-sub active">Compétences</a>
+          <a href="./a-propos-3.php" class="btn-sub">A propos de moi</a>
         </div>
       </section>
 

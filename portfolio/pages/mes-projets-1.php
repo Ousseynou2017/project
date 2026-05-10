@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projets | YouTube Clone</title>
     
-    <link rel="stylesheet" href="../css/Mes projet.css" />
+    <link rel="stylesheet" href="../css/mes-projet.css" />
     
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <a href="../index.html" class="logo"><h2>Portfolio.</h2></a>
+      <a href="../index.php" class="logo"><h2>Portfolio.</h2></a>
       <nav>
         <ul>
-          <li><a class="head" href="../index.html">Accueil</a></li>
-          <li><a class="head" href="./A propos-2.html">À propos</a></li>
-          <li><a class="head active" href="./Mes projets-1.html">Projets</a></li>
-          <li><a class="head" href="./Contact.html">Contact</a></li>
+          <li><a class="head" href="../index.php">Accueil</a></li>
+          <li><a class="head" href="./a-propos-2.php">À propos</a></li>
+          <li><a class="head active" href="./mes-projets-1.php">Projets</a></li>
+          <li><a class="head" href="./Contact.php">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -49,7 +49,7 @@
         <div class="section-2">
           <img src="../images/Youtube.png" alt="Aperçu projet YouTube" />
           
-          <a href="./Mes projet-2.html" class="next-proj">
+          <a href="./mes-projet-2.php" class="next-proj">
             <i class="bx bxs-right-arrow-square"></i>
           </a>
         </div>
