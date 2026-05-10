@@ -13,19 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   </head>
   <body>
-   <header>
-  <a href="./index.php" class="logo"><h2>Portfolio.</h2></a>
-  <nav>
-    <ul>
-      <li><a class="head active" href="./index.php">Accueil</a></li>
-      
-      <li><a class="head" href="./pages/a-propos-2.php">À propos</a></li>
-      
-      <li><a class="head" href="./pages/mes-projets-1.php">Projets</a></li>
-      <li><a class="head" href="./pages/Contact.php">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+   <?php require __DIR__ . '/composants/navigation.php'; ?>
 
     <main>
       <section class="home-section">
@@ -62,8 +50,6 @@
       </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Ousseynou Seck - Tous droits réservés.</p>
-    </footer>
+    <?php require __DIR__ . '/composants/pied-de-page.php'; ?>
   </body>
 </html>

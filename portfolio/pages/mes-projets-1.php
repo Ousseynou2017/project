@@ -1,63 +1,114 @@
+<?php
+require __DIR__ . '/../fonctions.php';
+
+$projets = [
+    [
+        'titre'        => 'YouTube Clone',
+        'description'  => 'RÃ©plique simplifiÃ©e de l\'interface YouTube, rÃ©alisÃ©e pour maÃ®triser les bases du positionnement CSS.',
+        'technologies' => ['HTML', 'CSS'],
+        'image'        => '../images/Youtube.png',
+        'lien'         => 'https://supersimple.dev/exercises/youtube/',
+        'github'       => 'https://github.com/Ousseynou2017/project/tree/main/YouTube',
+    ],
+    [
+        'titre'        => 'Netflix Clone',
+        'description'  => 'RÃ©plique de la page d\'accueil Netflix pour pratiquer les layouts CSS avancÃ©s.',
+        'technologies' => ['HTML', 'CSS'],
+        'image'        => '../images/Netflix.png',
+        'lien'         => 'https://ousseynou2017.github.io/project/Netflix/',
+        'github'       => 'https://github.com/Ousseynou2017/project/tree/main/Netflix',
+    ],
+    [
+        'titre'        => 'Page Hommage',
+        'description'  => 'Page d\'hommage rÃ©alisÃ©e dans le cadre d\'un exercice sur la mise en page HTML.',
+        'technologies' => ['HTML', 'CSS'],
+        'image'        => '../images/tribute.jpg',
+        'lien'         => '#',
+        'github'       => 'https://github.com/Ousseynou2017/project/tree/main/hommage',
+    ],
+    [
+        'titre'        => 'Product Landing Page',
+        'description'  => 'Page de prÃ©sentation d\'un produit, rÃ©alisÃ©e pour pratiquer la mise en page et le design CSS.',
+        'technologies' => ['HTML', 'CSS'],
+        'image'        => '../images/img-1.png',
+        'lien'         => 'https://ousseynou2017.github.io/project/product-landing/',
+        'github'       => 'https://github.com/Ousseynou2017/project/tree/main/product-landing',
+    ],
+];
+$mot_cle  = nettoyer($_GET['q'] ?? '');
+$resultats = [];
+
+if ($mot_cle !== '') {
+    foreach ($projets as $projet) {
+        if (stripos($projet['titre'], $mot_cle) !== false ||
+            stripos($projet['description'], $mot_cle) !== false) {
+            $resultats[] = $projet;
+        }
+    }
+} else {
+    $resultats = $projets;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projets | YouTube Clone</title>
-    
+    <title>Projets | Portfolio Ousseynou Seck</title>
     <link rel="stylesheet" href="../css/mes-projet.css" />
-    
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <a href="../index.php" class="logo"><h2>Portfolio.</h2></a>
-      <nav>
-        <ul>
-          <li><a class="head" href="../index.php">Accueil</a></li>
-          <li><a class="head" href="./a-propos-2.php">À propos</a></li>
-          <li><a class="head active" href="./mes-projets-1.php">Projets</a></li>
-          <li><a class="head" href="./Contact.php">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-<main>
-      <h1 class="titre">Latest <span>Project</span></h1>
-      
-      <div class="Section">
-        <div class="section-1">
-          <!-- Modifié ici : Ajout de spans pour les couleurs -->
-          <div class="numb">
-            <span>0</span><span>1</span>
-          </div>
-          
-          <!-- Modifié ici : Ajout de span pour Project -->
-          <h3>YouTube <span>Project</span></h3>
-          
-          <p>Ce projet est une réplique simplifiée de l'interface de YouTube, réalisée pour maîtriser les bases du positionnement CSS.</p>
-          
-          <div class="icon">
-            <p class="langage">HTML, CSS</p>
-            <div class="project-links">
-                <a target="_blank" href="https://supersimple.dev/exercises/youtube/"><i class='bx bx-link-external'></i></a>
-                <a target="_blank" href="https://github.com/Ousseynou2017"><i class='bx bxl-github'></i></a>
-            </div>
-          </div>
-        </div>
+</head>
+<body>
 
-        <div class="section-2">
-          <img src="../images/Youtube.png" alt="Aperçu projet YouTube" />
-          
-          <a href="./mes-projet-2.php" class="next-proj">
-            <i class="bx bxs-right-arrow-square"></i>
-          </a>
+<?php require __DIR__ . '/../composants/navigation.php'; ?>
+
+<main>
+    <h1 class="titre">Latest <span>Projects</span></h1>
+
+    <!-- Barre de recherche -->
+    <form method="GET" action="" style="text-align:center; margin: 2rem 0;">
+        <input
+            type="text"
+            name="q"
+            placeholder="Rechercher un projet..."
+            value="<?= $mot_cle ?>"
+            style="padding: 0.7rem 1rem; width: 300px; border-radius: 8px; border: none; font-size: 1rem;"
+        />
+        <button type="submit" style="padding: 0.7rem 1.2rem; background: #00abf0; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem;">
+            Rechercher
+        </button>
+    </form>
+
+    <!-- Résultats -->
+    <?php if (empty($resultats)) : ?>
+        <p style="text-align:center; color: #aaa;">Aucun projet ne correspond à votre recherche.</p>
+    <?php endif; ?>
+
+    <?php foreach ($resultats as $projet) : ?>
+    <div class="Section">
+        <div class="section-1">
+            <h3><?= htmlspecialchars($projet['titre']) ?> <span>Project</span></h3>
+            <p><?= htmlspecialchars($projet['description']) ?></p>
+            <div class="icon">
+                <p class="langage"><?= implode(', ', $projet['technologies']) ?></p>
+                <div class="project-links">
+                    <a target="_blank" href="<?= htmlspecialchars($projet['lien']) ?>"><i class='bx bx-link-external'></i></a>
+                    <a target="_blank" href="<?= htmlspecialchars($projet['github']) ?>"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <a href="/portfolio/pages/demande-projet.php" class="button-1" style="display:inline-block; margin-top:1rem; padding: 0.6rem 1.2rem; background:#00abf0; color:white; border-radius:8px; text-decoration:none;">
+                Demander ce projet
+            </a>
         </div>
-      </div>
-    </main>
-  
-    <footer style="text-align: center; padding: 2rem;">
-        <p>&copy; 2026 Ousseynou Seck - Tous droits réservés.</p>
-    </footer>
-  </body>
+        <div class="section-2">
+            <img src="<?= htmlspecialchars($projet['image']) ?>" alt="<?= htmlspecialchars($projet['titre']) ?>" />
+        </div>
+    </div>
+    <?php endforeach; ?>
+</main>
+
+<?php require __DIR__ . '/../composants/pied-de-page.php'; ?>
+
+</body>
 </html>
