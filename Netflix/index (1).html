@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">NETFLIX<span>.</span></div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active">Menu</a>
+        <a href="#" class="nav-item">Browse</a>
+        <a href="#" class="nav-item">Watchlist</a>
+        <a href="#" class="nav-item">Coming soon</a>
+        <a href="#" class="nav-item">Social</a>
+        <a href="#" class="nav-item">Parties</a>
+        <a href="#" class="nav-item">General</a>
+        <a href="#" class="nav-item">Setting</a>
+        <a href="#" class="nav-item logout">Log out</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- TOP BAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="arrow-btn">&#8249;</button>
+          <button class="arrow-btn">&#8250;</button>
+        </div>
+        <div class="topbar-center">
+          <div class="search-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input type="text" placeholder="Search" />
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button class="icon-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+            <span class="badge">3</span>
+          </button>
+          <button class="icon-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </button>
+          <div class="profile">
+            <img src="img/img-cat.jpg" alt="profile" class="profile-pic" />
+            <span class="profile-name">Cat Doe Admin</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-bg">
+          <img src="img/img-6.png" alt="The Witcher" class="hero-img" />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-badges">
+            <span class="badge-xp">10XP / épisodes</span>
+            <div class="hero-avatars">
+              <img src="img/img-cat.jpg" alt="" />
+              <img src="img/img-cat.jpg" alt="" />
+              <img src="img/img-cat.jpg" alt="" />
+            </div>
+          </div>
+          <h1 class="hero-title">The Witcher</h1>
+          <div class="hero-meta">
+            <span class="match">98% Match</span>
+            <span class="seasons">2 Seasons</span>
+          </div>
+          <div class="hero-actions">
+            <button class="btn-watch">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              Watch Now
+            </button>
+            <button class="btn-add">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORIES -->
+      <section class="categories">
+        <h2 class="section-title">Categories</h2>
+
+        <div class="category-row">
+          <div class="movie-card featured">
+            <img src="img/img-cat.jpg" alt="The Witcher" />
+            <div class="card-overlay">
+              <h3>The Witcher</h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+          <div class="movie-card">
+            <img src="img/img-cat.jpg" alt="Movie" />
+            <div class="card-overlay">
+              <h3>Dark Series</h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+          <div class="movie-card">
+            <img src="img/img-cat.jpg" alt="Movie" />
+            <div class="card-overlay">
+              <h3>Stranger Things</h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+          <div class="movie-card featured">
+            <img src="img/img-cat.jpg" alt="Movie" />
+            <div class="card-overlay">
+              <h3>Squid Game</h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+          <div class="movie-card">
+            <img src="img/img-cat.jpg" alt="Movie" />
+            <div class="card-overlay">
+              <h3>Money Heist</h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+          <div class="movie-card">
+            <img src="img/img-cat.jpg" alt="Movie" />
+            <div class="card-overlay">
+              <h3>Ozark</h3>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
