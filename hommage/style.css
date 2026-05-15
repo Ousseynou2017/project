@@ -558,3 +558,12 @@ cite {
   .hero-bg-text { font-size: 50vw; right: -10vw; }
   .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
 }
+
+.athlete-photo {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  filter: grayscale(15%);
+}

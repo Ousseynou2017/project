@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/../fonctions.php';
+require '../fonctions.php';
 
 $projets = [
     [
@@ -7,7 +7,7 @@ $projets = [
         'description'  => 'RÃ©plique simplifiÃ©e de l\'interface YouTube, rÃ©alisÃ©e pour maÃ®triser les bases du positionnement CSS.',
         'technologies' => ['HTML', 'CSS'],
         'image'        => '../images/Youtube.png',
-        'lien'         => 'https://supersimple.dev/exercises/youtube/',
+        'lien'         => 'https://ousseynou2017.github.io/project/YouTube/',
         'github'       => 'https://github.com/Ousseynou2017/project/tree/main/YouTube',
     ],
     [
@@ -22,7 +22,7 @@ $projets = [
         'titre'        => 'Page Hommage',
         'description'  => 'Page d\'hommage rÃ©alisÃ©e dans le cadre d\'un exercice sur la mise en page HTML.',
         'technologies' => ['HTML', 'CSS'],
-        'image'        => '../images/tribute.jpg',
+        'image'        => '../images/combat.png',
         'lien'         => '#',
         'github'       => 'https://github.com/Ousseynou2017/project/tree/main/hommage',
     ],
@@ -61,7 +61,7 @@ if ($mot_cle !== '') {
 </head>
 <body>
 
-<?php require __DIR__ . '/../composants/navigation.php'; ?>
+<?php require '../composants/navigation.php'; ?>
 
 <main>
     <h1 class="titre">Latest <span>Projects</span></h1>
@@ -97,7 +97,7 @@ if ($mot_cle !== '') {
                     <a target="_blank" href="<?= htmlspecialchars($projet['github']) ?>"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
-            <a href="/portfolio/pages/demande-projet.php" class="button-1" style="display:inline-block; margin-top:1rem; padding: 0.6rem 1.2rem; background:#00abf0; color:white; border-radius:8px; text-decoration:none;">
+            <a href="/pages/demande-projet.php" class="button-1" style="display:inline-block; margin-top:1rem; padding: 0.6rem 1.2rem; background:#00abf0; color:white; border-radius:8px; text-decoration:none;">
                 Demander ce projet
             </a>
         </div>
@@ -108,7 +108,7 @@ if ($mot_cle !== '') {
     <?php endforeach; ?>
 </main>
 
-<?php require __DIR__ . '/../composants/pied-de-page.php'; ?>
+<?php require '../composants/pied-de-page.php'; ?>
 
 </body>
 </html>
